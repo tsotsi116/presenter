@@ -13,6 +13,5 @@ export default new Vuex.Store({
             state.queue.push(payload)
         },
     },
-    getters: {},
     actions: {}
 });

@@ -1,8 +1,15 @@
-import Vue from 'vue';
-import App from "./App.vue";
+var Vue = require('vue/dist/vue.min');
+import io from 'socket.io-client';
 
-Vue.config.productionTip = false;
+var socket = io();
+socket.on('present', function (msg) {
+    console.log(msg);
+    app.msg = msg;
+});
 
-new Vue({
-    render: h => h(App),
-}).$mount('#app');
+var app = new Vue({
+    el: '#app',
+    data: () => ({
+        msg: {}
+    })
+})

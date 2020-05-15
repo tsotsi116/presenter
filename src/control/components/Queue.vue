@@ -14,12 +14,22 @@
 </template>
 
 <script>
-    import {mapState} from 'vuex';
+    import {mapState, mapGetters} from 'vuex';
 
     export default {
         name: "Queue",
         computed: {
             ...mapState(['queue']),
+            ...mapGetters(['getItemFromQueue']),
+        },
+        methods: {
+            project(id) {
+                this.$present(this.queue.find(q => {
+                    if (q.id === id) {
+                        return q;
+                    }
+                }));
+            }
         },
 
     }

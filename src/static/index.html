@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Viewer</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+    <br>
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth content">
+            <p class="has-text-centered">{{msg.message}}</p>
+        </div>
+    </div>
+</div>
 <script src="js/viewer.js"></script>
 </body>
 </html>
