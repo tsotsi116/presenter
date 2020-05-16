@@ -8,6 +8,7 @@
   "scripts": {
     "serve": "node main.js",
     "control": "webpack --mode=development --inline --progress --hide-modules --config=webpack.config.js --watch",
+    "build": "webpack --mode=production --inline --progress --hide-modules --config=webpack.config.js",
     "assets": "cp node_modules/bulma/css/bulma.min.css src/static/css"
   },
   "dependencies": {

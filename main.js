@@ -8,7 +8,7 @@ app.use(express.static('src/static'));
 io.on('connection', (socket) => {
     console.log('connected');
     socket.on('present', msg => {
-        console.log('message: ' + msg);
+        // console.log('message: ' + msg);
         io.emit('present', msg);
     });
     socket.on('disconnect', () => {
