@@ -60,7 +60,13 @@
                     buff.words = res.song.lyrics[0].verse;
                     this.song = buff;
                 })
-            }
+            },
+            project(lyric){
+                this.$present({
+                    type:'song',
+                    message: lyric.replaceAll('\n', '<br>')
+                });
+            },
         }
     }
 </script>

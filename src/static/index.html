@@ -10,7 +10,10 @@
     <br>
     <div class="columns">
         <div class="column is-three-fifths is-offset-one-fifth content">
-            <p class="has-text-centered">{{msg.message}}</p>
+            <p class="has-text-centered">
+                <span v-if="msg.type === 'text'">{{msg.message}}</span>
+                <span v-if="msg.type === 'song'" v-html="msg.message"></span>
+            </p>
         </div>
     </div>
 </div>

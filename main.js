@@ -11,7 +11,7 @@ app.use(express.static('src/static'));
 app.get('/songs', (req, res) => {
     songs.all("SELECT DISTINCT id,title, lyrics FROM songs", (err, row) => {
         if (err) {
-            return [];
+            res.send('Error');
         }
         res.send(row);
     });
