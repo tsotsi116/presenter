@@ -19,7 +19,7 @@
                     <div class="navbar-item">
                         <div class="field is-grouped">
                             <p class="control">
-                                <button class="button is-primary">Clear</button>
+                                <button class="button is-primary" @click="clearScreen">Clear</button>
                             </p>
                         </div>
                     </div>
@@ -45,7 +45,13 @@
     export default {
         name: "App",
         components: {Queue},
-        created() {
+        methods:{
+            clearScreen(){
+                this.$present({
+                    type: 'text',
+                    message: '',
+                })
+            }
         }
     }
 </script>
